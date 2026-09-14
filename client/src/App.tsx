@@ -1,0 +1,13 @@
+import { Router, Route } from 'wouter';
+import Home from './pages/Home';
+import { ErrorBoundary } from './components/ErrorBoundary';
+
+export default function App() {
+  return (
+    <ErrorBoundary>
+      <Router>
+        <Route path="/" component={Home} />
+      </Router>
+    </ErrorBoundary>
+  );
+}
